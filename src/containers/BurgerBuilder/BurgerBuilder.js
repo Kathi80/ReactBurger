@@ -57,8 +57,7 @@ class BurgerBuilder extends Component {
 
         this.setState ({totalPrice: newPrice , ingredients: updatedIngredients})
     }
-
-
+    
     render (){
         const disabledInfo = {
             ...this.state.ingredients
