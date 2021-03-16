@@ -5,7 +5,8 @@ import Auxiliary from '../../../hoc/Auxiliary';
 import '../../UI/Button/Button.css'
 
 const orderSummary = (props) => {
-    const ingredientSummary = Object.keys(props.ingredients)
+    const ingredientSummary = Object.keys(props.ingredients) 
+    .filter(igKey => props.ingredients[igKey] > 0)
     .map(igKey =>{
     return  (<li key={igKey}>
         <span style={{textTransform: 'capitalize'}}>{igKey}</span>: {props.ingredients[igKey]}
